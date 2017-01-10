@@ -1,6 +1,4 @@
-# theoutcome-content
-
-This repository contains core content for the game:
+**theoutcome-content** repository contains core content for the game:
 - GameFiles wraped in 'packages'
 - scenario files (save files)
 
