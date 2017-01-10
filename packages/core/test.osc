@@ -1,0 +1,105 @@
+use some_package
+use something_else
+
+define act some_action
+{
+  setup
+  {
+    title = "name"
+    description = "desc"
+  }
+
+  req 0
+  {
+    # conditions for req 0
+  }
+
+  req 1
+  {
+    # conditions for req 1
+    # conditions for req 2
+  }
+
+  stage 1
+  {
+    # the starting stage
+  }
+
+}
+
+############################################################
+
+define act action001
+{
+  # This is a proxy action for changing laws. STAGE99 will be the target stage.
+  # stage 1 is called on activation (immediately)
+  setup
+  {
+    @title = Some prototype action
+    @description = Let's do this!
+    @updatefreq = 1
+    $lawstatus = 0
+    $temp = 0
+    $$some_modifier =
+  }
+
+
+
+  req 0
+  {
+    alltrue spp(legislative_efficiency) > 0
+
+    alltrue spp(something_other) > 0
+  }
+
+  stage 1
+  {
+    log tostring($localvariable)
+    log tostring($lawstatus)
+    #LOG(TOSTRING($lawstatus))
+
+    choice
+      "So this is a proper action huh?",
+      "It's easier than you might have thought. Just click on one of the buttons below. Do it!",
+      PCM0003,
+      2 2,
+      "First choice is always thought to be the best one",
+      "Some numbers and stuff..",
+      "Ignore everything and focus on the objective, whatever it may be",
+      "If you do this, there will be no turning back. Also - numbers!"
+  }
+
+  stage 2
+  {
+    onetrue
+      spp(legislative_efficiency) > 0,
+      spp() > 1
+
+    # do something
+    else continue
+
+
+
+
+
+    #LOG(We're in stage2, about to set updatefreq to 10, also currentstage to 3)
+    #set the wait to 10 days
+    @updatefreq = 3
+    @currentstage = 3
+  }
+
+  stage 3
+  {
+    #LOG(this is stage3!)
+    CHOICE(
+      This is proper action PART TWO
+      YOYOYO it's a short desc here!
+      PCM0002
+      0,0
+      First choice is always thought to be the best one
+      Some numbers and stuff..
+      Ignore everything and focus on the objective, whatever it may be
+      If you do this, there will be no turning back. Also - numbers!
+    )
+  }
+}
