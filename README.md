@@ -7,21 +7,18 @@ This repository contains core content for the game:
 
 # Quick guide
 *This guide uses some seemingly generic terms for certain items. This is mainly due to poor naming on the [@artrist](https://github.com/artrist)'s part, some of the terms are a remnant of the project's very beginning; despite that it kinda really makes a lot of things easier to understand, or even self-explanatory, which is one of the main goals with this project. If you're new take a moment to get familiar with the basic terms and mechanics.*
-   
-   
-  
-  
-  
-
+<br />
+<br />
 ## What are Packages?
-Package is a collection of GameFiles. Organizing the GameFiles into packages makes managing game content easier for everyone, for obvious reasons, most notably it's about the improved readability and less confusion. It also makes writing new content more straightforward because of clear rules for dependencies.
+*Package* is a collection of GameFiles. Organizing the GameFiles into packages makes managing game content easier for everyone, for obvious reasons, most notably it's about the improved readability and less confusion. It also makes writing new content more straightforward because of clear rules for dependencies.
 
 ### What is a GameFile?
-GameFile is a collection of GameElements (see GameElement). GameFiles are written in OutcomeScript (see OutcomeScript), each GameFile needs a declaration of Packages it will depend on (Packages it will invoke).
+*GameFile* is a collection of GameElements (see GameElement). GameFiles are written in OutcomeScript (see OutcomeScript), each GameFile needs a declaration of Packages it will depend on (Packages it will invoke).
 
 ### What is a GameElement?
-Most generally speaking, GameElement is a set of rules used for the runtime simulation. 
+Most generally speaking, *GameElement* is a set of rules used for the runtime simulation.
 
+<br />
 ## What are Scenario Files/Save Files?
 You can think of them as of saved game states. Variables declared as 'savable' in the GameFiles will be stored inside these files. **Modifying the game by importing Packages into the game directory or directly modifying the GameFiles will result in the change of checksum and different requirements for Save Files (different variables need to be saved).** In the event of trying to use Save File which is not-fully-compatible with the current state of the game configuration (game files configuration) it will notify the player about the inconsistencies:
 - [TODO?] check the packages against the files stored online, display possible inconsistencies
