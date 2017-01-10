@@ -7,7 +7,11 @@ This repository contains core content for the game:
 
 # Quick guide
 *This guide uses some seemingly generic terms for certain items. This is mainly due to poor naming on the [@artrist](https://github.com/artrist)'s part, some of the terms are a remnant of the project's very beginning; despite that it kinda really makes a lot of things easier to understand, or even self-explanatory, which is one of the main goals with this project. If you're new take a moment to get familiar with the basic terms and mechanics.*
-____
+   
+   
+  
+  
+  
 
 ## What are Packages?
 Package is a collection of GameFiles. Organizing the GameFiles into packages makes managing game content easier for everyone, for obvious reasons, most notably it's about the improved readability and less confusion. It also makes writing new content more straightforward because of clear rules for dependencies.
