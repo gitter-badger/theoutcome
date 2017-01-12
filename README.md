@@ -28,4 +28,11 @@ You can think of them as of saved game states. Variables declared as 'savable' i
 
 **Conversion** means a Save File will be conformed to the current game configuration's needs for savable data: new variables will be added if required (using default values defined in GameFile, see GameFile), unused variables will be discarded, checksum will be overwritten.
 
+## Handling errors
 
+### Parsing errors
+If there is an error during parsing a script for GameElement, the whole GameElement and everything depending on it is discarded (excluded from the configuration).
+
+[TODO?] smarter error handling 
+
+Parsing errors are sent to and can be reviewed from the game console.
