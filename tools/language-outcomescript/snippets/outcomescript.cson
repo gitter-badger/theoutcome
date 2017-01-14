@@ -1,0 +1,80 @@
+'.source.outcomescript':
+  'define':
+    'prefix': 'define'
+    'body': 'define '
+  'use':
+    'prefix': 'use'
+    'body': 'use '
+  'onetrue':
+    'prefix': 'onetrue'
+    'body': '''
+    onetrue
+
+    '''
+  'setup':
+    'prefix': 'setup'
+    'body': '''
+    setup
+    {
+      title = "${1:type in the title}"
+      description = "${2:type in the description}"
+    }${3}
+    '''
+
+  'define act':
+    'prefix': 'define act'
+    'body': '''
+    define act ${1:action_name}
+    {
+      setup
+      {
+        title = "${2:the title}"
+        description = "${3:the description}"
+      }
+
+      req 0
+      {
+        ${4:# conditions for req 0}
+      }
+
+      req 1
+      {
+        ${5:# conditions for req 1}
+      }
+
+      stage 1
+      {
+        ${6:# the starting stage}
+      }
+    }
+
+    ############################################################
+
+    '''
+
+  'choice2':
+    'prefix': 'choice 2'
+    'body': '''
+    choice
+      "${1:}" # title
+      "${2:}" # desc
+      ${3:0} ${4:0} # target stages
+      "${5:}" # 1label
+      "${6:}" # 1tooltip
+      "${7:}" # 2label
+      "${8:}" # 2tooltip
+
+    '''
+
+  'choice3':
+    'prefix': 'choice 3'
+    'body': '''
+    choice
+      ${1:# 1label}
+      ${2:# 1tooltip}
+      ${3:# 2label}
+      ${4:# 2tooltip}
+      ${5:# 3label}
+      ${6:# 3tooltip}
+
+    '''

@@ -1,0 +1,55 @@
+'scopeName': 'source.outcomescript'
+'name': 'OutcomeScript'
+'fileTypes': ['osc']
+'patterns': [
+  {
+    'name': 'commentline'
+    'begin': '#'
+    'end': '$'
+  }
+  {
+    'name': 'basic.define'
+    'begin': '\\b(define)\\b\\s+([a-zA-Z_]*)\\b\\s+([a-zA-Z0-9_]*)'
+    'end': '$'
+    'beginCaptures': {
+      '1': { 'name': 'basic.define' }
+      '2': { 'name': 'basic.definetype' }
+      '3': { 'name': 'basic.definename' }
+    }
+  },
+  {
+    'name': 'basic.use'
+    'begin': '\\b(use)\\s+([a-zA-Z_][a-zA-Z0-9_]*)'
+    'end': '$'
+  }
+  {
+    'name': 'string'
+    'begin': 'b?"'
+    'end': '"'
+  }
+  {
+    'name': 'variables.localcustom'
+    'match': '(\\$)[a-zA-Z_]\\w*'
+  }
+  {
+    'name': 'variables.localmod'
+    'match': '(\\$\\$)[a-zA-Z_]\\w*'
+  }
+  {
+    'name': 'variables.localhard'
+    'match': '(\\@)[a-zA-Z_]\\w*'
+  }
+  {
+    'name': 'basic.bloc'
+    'match': '\\b(setup|stage|req)'
+  }
+  {
+    'name': 'basic.statement'
+    'match': '\\b(alltrue|onetrue|else|log|choice)\\b'
+  }
+  {
+    'name': 'basic.varfunction'
+    'match': '\\b(tostring|spp|gev)'
+  }
+
+]
