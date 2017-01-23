@@ -4,6 +4,8 @@
 
 
 # Quick guide
+
+[![Join the chat at https://gitter.im/theoutcome/Lobby](https://badges.gitter.im/theoutcome/Lobby.svg)](https://gitter.im/theoutcome/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 *This guide uses some seemingly generic terms for certain items. This is mainly due to poor naming on the [@artrist](https://github.com/artrist)'s part, some of the terms are a remnant of the project's very beginning; despite that it kinda really makes a lot of things easier to understand, or even self-explanatory, which is one of the main goals overall. If you're new take a moment to get familiar with the basic terms and mechanics. This quick guide covers the basic terms and ideas behind the content creation. For more detailed guides check [the project website](https://theoutcome.000webhostapp.com/index.php/modding/).*
 <br />
 <br />
